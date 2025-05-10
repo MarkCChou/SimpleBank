@@ -23,7 +23,7 @@
         {
             balance += amount;
             Console.WriteLine($"存款 ${amount}成功。餘額 : ${balance}");
-            Transaction transaction = new Transaction("存款", amount);
+            Transaction transaction = new Transaction(Action.deposit, amount, true);
             transactions.Add(transaction);
         }
 
@@ -33,16 +33,40 @@
             {
                 balance -= amount;
                 Console.WriteLine($"提款 ${amount}成功。餘額 : ${balance}");
-                Transaction transaction = new Transaction("提款", amount);
+                Transaction transaction = new Transaction(Action.withdraw, amount, true);
                 transactions.Add(transaction);
             }
             else
             {
                 Console.WriteLine("餘額不足，無法提領輸入之金額");
-                Transaction transaction = new Transaction("提款失敗", 0);
+                Transaction transaction = new Transaction(Action.withdraw, 0, false);
                 transactions.Add(transaction);
 
             }
+        }
+
+
+        public void TransferTo(BankAccount target, decimal amount)
+        {
+            if (balance >= amount)
+            {
+                balance -= amount;
+                target.balance += amount;
+                Console.WriteLine($"轉帳成功! 從{owner}的帳戶轉帳${amount}至{target.owner}的帳戶\n{owner}的帳戶存款剩餘${balance}");
+                Transaction transaction = new Transaction(Action.tansfer, amount, true);
+                Transaction transaction2 = new Transaction(Action.tansfer, amount, true);
+                transactions.Add(transaction);
+                target.transactions.Add(transaction2);
+            }
+
+            else if (balance < amount)
+            {
+                Console.WriteLine("餘額不足，轉帳失敗");
+                Transaction transaction = new Transaction(Action.Receive, 0, false);
+                transactions.Add(transaction);
+            }
+
+
         }
 
         public void PrintAccountInfo(string owner)
@@ -57,37 +81,19 @@
             }
         }
 
-
-
-        public void TransferTo(BankAccount target, decimal amount)
-        {
-            if (balance >= amount)
-            {
-                balance -= amount;
-                target.balance += amount;
-                Console.WriteLine($"轉帳成功! 從{owner}的帳戶轉帳${amount}至{target.owner}的帳戶\n{owner}的帳戶存款剩餘${balance}");
-                Transaction transaction = new Transaction("轉帳成功", amount);
-                Transaction transaction2 = new Transaction("接受轉帳", amount);
-                transactions.Add(transaction);
-                target.transactions.Add(transaction2);
-            }
-
-            else if (balance < amount)
-            {
-                Console.WriteLine("餘額不足，轉帳失敗");
-                Transaction transaction = new Transaction("轉帳失敗", 0);
-                transactions.Add(transaction);
-            }
-
-
-        }
-
         public void PrintTransactionHistory()
         {
             Console.WriteLine($"---{owner}帳戶交易紀錄---");
             foreach (var item in transactions)
             {
-                Console.WriteLine($"{item.type} ${item.amount} - {item.time}");
+                if (item.success)
+                    Console.WriteLine($"[{item.type}] ${item.amount} - {item.time}");
+                else
+                {
+                    Console.WriteLine($"[{item.type}失敗] {item.time}");
+                }
+
+
             }
         }
 

@@ -12,3 +12,4 @@ C:\Users\周俊志\source\repos\SimpleBank\SimpleBank\obj\Debug\net8.0\refint\Si
 C:\Users\周俊志\source\repos\SimpleBank\SimpleBank\obj\Debug\net8.0\SimpleBank.pdb
 C:\Users\周俊志\source\repos\SimpleBank\SimpleBank\obj\Debug\net8.0\SimpleBank.genruntimeconfig.cache
 C:\Users\周俊志\source\repos\SimpleBank\SimpleBank\obj\Debug\net8.0\ref\SimpleBank.dll
+C:\Users\周俊志\source\repos\SimpleBank\SimpleBank\obj\Debug\net8.0\SimpleBank.sourcelink.json

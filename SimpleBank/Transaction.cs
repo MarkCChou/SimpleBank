@@ -5,36 +5,30 @@
         public string type;
         public decimal amount;
         public DateTime time;
+        public bool success;
 
 
-        public Transaction(string type, decimal amount)
+        public Transaction(Action action, decimal amount, bool success)
         {
-            if (type == "存款")
+            switch (action)
             {
-                this.type = "[存款]";
+                case Action.deposit:
+                    this.type = "存款";
+                    break;
+                case Action.withdraw:
+                    this.type = "提款";
+                    break;
+                case Action.tansfer:
+                    this.type = "轉出";
+                    break;
+                case Action.Receive:
+                    this.type = "轉入";
+                    break;
             }
-            else if (type == "提款")
-            {
-                this.type = "[提款]";
-            }
-            else if (type == "提款失敗")
-            {
-                this.type = "[提款失敗]";
-            }
-            else if (type == "轉帳成功")
-            {
-                this.type = "[轉帳]";
-            }
-            else if (type == "轉帳失敗")
-            {
-                this.type = "[轉帳失敗]";
-            }
-            else if (type == "接受轉帳")
-            {
-                this.type = "[接受轉帳]";
-            }
+
             this.amount = amount;
             this.time = DateTime.Now;
+            this.success = success;
         }
     }
 }
