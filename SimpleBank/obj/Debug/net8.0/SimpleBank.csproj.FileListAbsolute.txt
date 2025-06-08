@@ -1,0 +1,15 @@
+C:\Users\周俊志\source\repos\SimpleBank\SimpleBank\bin\Debug\net8.0\SimpleBank.exe
+C:\Users\周俊志\source\repos\SimpleBank\SimpleBank\bin\Debug\net8.0\SimpleBank.deps.json
+C:\Users\周俊志\source\repos\SimpleBank\SimpleBank\bin\Debug\net8.0\SimpleBank.runtimeconfig.json
+C:\Users\周俊志\source\repos\SimpleBank\SimpleBank\bin\Debug\net8.0\SimpleBank.dll
+C:\Users\周俊志\source\repos\SimpleBank\SimpleBank\bin\Debug\net8.0\SimpleBank.pdb
+C:\Users\周俊志\source\repos\SimpleBank\SimpleBank\obj\Debug\net8.0\SimpleBank.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\周俊志\source\repos\SimpleBank\SimpleBank\obj\Debug\net8.0\SimpleBank.AssemblyInfoInputs.cache
+C:\Users\周俊志\source\repos\SimpleBank\SimpleBank\obj\Debug\net8.0\SimpleBank.AssemblyInfo.cs
+C:\Users\周俊志\source\repos\SimpleBank\SimpleBank\obj\Debug\net8.0\SimpleBank.csproj.CoreCompileInputs.cache
+C:\Users\周俊志\source\repos\SimpleBank\SimpleBank\obj\Debug\net8.0\SimpleBank.dll
+C:\Users\周俊志\source\repos\SimpleBank\SimpleBank\obj\Debug\net8.0\refint\SimpleBank.dll
+C:\Users\周俊志\source\repos\SimpleBank\SimpleBank\obj\Debug\net8.0\SimpleBank.pdb
+C:\Users\周俊志\source\repos\SimpleBank\SimpleBank\obj\Debug\net8.0\SimpleBank.genruntimeconfig.cache
+C:\Users\周俊志\source\repos\SimpleBank\SimpleBank\obj\Debug\net8.0\ref\SimpleBank.dll
+C:\Users\周俊志\source\repos\SimpleBank\SimpleBank\obj\Debug\net8.0\SimpleBank.sourcelink.json
